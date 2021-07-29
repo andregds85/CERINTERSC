@@ -6,13 +6,8 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
 
-
-
     <link rel="canonical" href="http://www.cerintersc.com.br/" />
     <link rel="canonical" href="http://www.cerintersc.com.br/content/home/" />
-
-
-
 
 
     <!-- Font Awesome -->
