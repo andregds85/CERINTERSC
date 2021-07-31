@@ -91,53 +91,41 @@ use App\Models\Terrestre;
 use App\Http\Controllers\TerrestreController;
 ?>
 
+   
 
-                        <!-- Solicitação -->
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Solicitação</label>
-                            <div class="col-md-6">
-                                <input id="solicitacao" type="text" class="form-control @error('solicitacao') is-invalid @enderror" name="solicitacao" value="{{ old('solicitacao') }}" required autocomplete="solicitacao" autofocus>
-                                @error('solicitacao')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                    
+{{ Auth::user()->name}}
+
+
+
+
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
                         </div>
 
 
 
-                        <!--  mototivoSolicitacao -->
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Motivo da Solicitacao') }}</label>
-                            <div class="col-md-6">
-                                <input id="solicitacao" type="text" class="form-control @error('motivoSolicitacao') is-invalid @enderror" name="motivoSolicitacao" value="{{ old('motivoSolicitacao') }}" required autocomplete="motivoSolicitacao">
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+
+
+    
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dados do Paciente') }}</div>
+
+                <div class="card-body">
 
 
 
-                      <!--  crih -->
-                       <div class="form-group row">
-                            <label for="crih" class="col-md-4 col-form-label text-md-right">{{ __('Central de Regulação de Internação Hospitalar(CRIH) ') }}</label>
-                            <div class="col-md-6">
-                                <input id="crih" type="text" class="form-control @error('crih') is-invalid @enderror" name="crih" required autocomplete="crih">
-                                @error('crih')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
-                        
-                      <!--  sisreg -->
-                       <div class="form-group row">
+
+
+                          <!--  sisreg -->
+                          <div class="form-group row">
                             <label for="sisreg" class="col-md-4 col-form-label text-md-right">{{ __('Sisreg') }}</label>
                             <div class="col-md-6">
                                 <input id="sisreg" type="text" class="form-control @error('sisreg') is-invalid @enderror" name="sisreg" required autocomplete="sisreg">
@@ -165,44 +153,18 @@ use App\Http\Controllers\TerrestreController;
                         </div>
 
 
-                       <!--  Médico Regulador -->
+                       <!--  usuário -->
                        <div class="form-group row">
-                            <label for="medicoRegulador" class="col-md-4 col-form-label text-md-right">{{ __('Médico Regulador') }}</label>
+                            <label for="medicoRegulador" class="col-md-4 col-form-label text-md-right">{{ __('Usuário') }}</label>
                             <div class="col-md-6">
-                                <input id="medicoRegulador" type="text" class="form-control @error('medicoRegulador') is-invalid @enderror" name="medicoRegulador" required autocomplete="medicoRegulador">
-                                @error('medicoRegulador')
+                                <input id="usuario" type="text" class="form-control @error('medicoRegulador') is-invalid @enderror" name="usuario" value="{{ Auth::user()->email}}" required autocomplete="usuario">
+                                @error('usuario')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
-
-
-
-
-
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-
-
-
-
-
-    
-    <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dados do Paciente') }}</div>
-
-                <div class="card-body">
-
-
-
 
 
                        <!--  nome -->
@@ -276,8 +238,6 @@ use App\Http\Controllers\TerrestreController;
                                 @enderror
                             </div>
                         </div>
-
-
 
 
 

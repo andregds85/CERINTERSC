@@ -24,16 +24,14 @@ $tabela = Terrestre::all();
    
 
      @foreach ($tabela as $t)
+    <p><h3><B> Dados do Paciente</h3></B><p>
     <p align="center"><B>ID :</B>{{$t->id }}<p>
     <p align="center"><B>Data :</B>{{$t->created_at }}<p>
-    <p><B>Número da Solicitação :</B>{{$t->solicitacao }}<p>
-    <p><B>Motivo da solicitação :</B>{{$t->motivoSolicitacao }}<p>
-    <p><B>Central de Regulação de Internação Hospitalar (CRIH) :</B>{{$t->crih }}<p>
+  
     <p><B> SISREG:</B>{{$t->sisreg }}<p>
     <p><B> CNSUS: </B>{{$t->CNSUS }}<p>
-    <p><B> MÉDICO REGULADOR: </B>{{$t->medicoRegulador }}<p>
-   
-    <p><h3><B> Dados do Paciente</h3></B><p>
+    <p><B> Usuário que preencheu: </B>{{$t->usuario }}<p>
+     
     <p><B> Nome :</B>{{$t->nome }}<p>
     <p><B> Sexo :</B>{{$t->sexo }}<p>
     <p><B> Data de Nascimento :</B>{{$t->dataNasc }}<p>

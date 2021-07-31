@@ -11,14 +11,11 @@ class Terrestre extends Model
     use HasFactory;
     protected $table="terrestre";
     protected $fillable = [
-       'solicitacao',
-       'motivoSolicitacao',
-       'crih',
+   
        'sisreg',
        'CNSUS',
-       'medicoRegulador',
-       
-           
+       'usuario',
+                  
        'nome',
        'sexo',
        'dataNasc',

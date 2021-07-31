@@ -16,6 +16,12 @@ use App\Http\Controllers\AeroControlleradm;
 use App\Http\Controllers\apagaController;
 use App\Http\Controllers\tempoRealController;
 use App\Http\Controllers\soundController;
+use App\Http\Controllers\ChecklistController;
+use App\Http\Controllers\ChecklistControllerPDF;
+use App\Http\Controllers\ChecklistControlleradm;
+
+
+
 
 
 
@@ -42,8 +48,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('solicitante', SolicitanteController::class);
     Route::resource('terrestre', TerrestreController::class);
     Route::resource('terrestreadm', TerrestreControlleradm::class);
+    Route::resource('checklistadm', ChecklistControlleradm::class);
+
     Route::resource('aeroadm', AeroControlleradm::class);
     Route::resource('sound', soundController::class);
+    Route::resource('checklist', ChecklistController::class);
+
 
  
     
@@ -58,7 +68,7 @@ Route::group(['middleware' => ['auth']], function() {
 
    
     
-    
+    Route::get('checklistpdf', [ChecklistControllerPDF::class, 'generatePDF']); 
     Route::get('pdf', [TerrestreControllerPDF::class, 'generatePDF']); 
     Route::get('aereoPdf', [aerioControllerPDF::class, 'generatePDF']); 
 

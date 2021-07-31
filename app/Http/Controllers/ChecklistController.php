@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Terrestre;
+use App\Models\Checklist;
 use Illuminate\Http\Request;
 
-class TerrestreController extends Controller
+class ChecklistController  extends Controller
 {
   
     function __construct()
@@ -18,7 +18,7 @@ class TerrestreController extends Controller
     
     public function index()
     {
-            return view('terrestre.index');
+            return view('checklistTransporte.index');
     }
    
 
@@ -26,16 +26,15 @@ class TerrestreController extends Controller
     {
     }
    
-   public function store(Request $request)
+    public function store(Request $request)
     {
         request()->validate([
-          
+ 
      
         ]);      
-        Terrestre::create($request->all());
+        Checklist::create($request->all());
         return view('monitoramento.index');
     }
-
 
     
 }
